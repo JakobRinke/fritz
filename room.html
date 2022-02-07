@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+
+		<link rel="stylesheet" href="style/main.css" type="text/css">
+    
+		<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+
+		<title>Fritz</title>
+
+		<meta charset ="utf-8">
+
+</head>
+
+
+<body>
+
+	<header>
+		<a href="index.html" class="back-arrow"> <img src="img/back.png" alt="Verlassen"></a>
+	</header>
+
+    <h1 id="RoomID"> Raum ID: </h1>
+
+  	<div id="gamestate_word" class="gamestate_visible">
+
+		
+        <input oninput ="UpdateWord()" type="text" class="inputField" autocomplete="off" required placeholder="Subjekt"/>
+        <input oninput ="UpdateWord()" type="text" class="inputField" autocomplete="off" required placeholder="Verb"/>
+        <input oninput ="UpdateWord()" type="text" class="inputField" autocomplete="off" required placeholder="Adjektiv"/>
+        <input oninput ="UpdateWord()" type="text" class="inputField" autocomplete="off" required placeholder="Präposition"/>
+        <input oninput ="UpdateWord()" type="text" class="inputField" autocomplete="off" required placeholder="Objekt"/>
+        
+
+        <button class="sub" onclick="start(roomID)"> Schreibzeit beenden </button>
+
+	</div>
+
+
+    <div id="gamestate_game" class="gamestate_invisible">
+
+        <h2 id="wordContainer"> Bitte warten... </h2>
+
+
+	</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
+    <script src="script/randfuncs.js"></script>
+    <script src="script/api.js"></script>
+    <script src="script/room.js"></script>
+
+
+</body>
+
+
+</html>
