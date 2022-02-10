@@ -37,7 +37,6 @@ function logRoom(data, key)
 function start(roomID)
 {
     gun.get(gameName + "/rooms/").get(roomID).get("started").put(true)
-    setRound(0)
 }
 
 
