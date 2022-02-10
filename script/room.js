@@ -83,10 +83,19 @@ function onPlayersLoaded()
 
 function convertPlayerMapToList(playerMap)
 {
-    var d = []
+    
+    var keyList = []
     for (key in playerMap)
     {
-        d.push(PlayerWordMap[key])
+        keyList.push(key)
+    }
+    keyList.sort(function(a, b) {
+        return a - b;
+      });
+    var d = []
+    for (key in keyList)
+    {
+        d.push(playerMap[key])
     }
     return d
 }
