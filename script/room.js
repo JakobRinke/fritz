@@ -44,8 +44,7 @@ async function onStartChange(data, key)
         
         gameStateWordDiv.classList.add('gamestate_invisible');
         gameStateWordDiv.classList.remove('gamestate_visible');
-
-        await delay(2000)
+        console.log(PlayerWordMap)
         onPlayersLoaded()
     }
 }
@@ -83,20 +82,23 @@ function onPlayersLoaded()
 
 function convertPlayerMapToList(playerMap)
 {
-    
+    console.log(playerMap)
     var keyList = []
     for (key in playerMap)
     {
+        console.log(key)
         keyList.push(key)
     }
-    keyList.sort(function(a, b) {
+    keyList = keyList.sort(function(a, b) {
         return a - b;
       });
+    console.log(keyList)
     var d = []
-    for (key in keyList)
-    {
+    keyList.forEach(key => {
+        console.log(key + "->" + d)
+
         d.push(playerMap[key])
-    }
+    })
     return d
 }
 
