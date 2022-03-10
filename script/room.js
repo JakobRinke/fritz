@@ -3,11 +3,16 @@ var WordInputs = document.getElementsByClassName("inputField")
 const Container = document.getElementById("wordContainer");
 const gameStateWordDiv = document.getElementById("gamestate_word");
 const gameStateGameDiv = document.getElementById("gamestate_game");
- 
+const dbutton = document.getElementById("endbtn")
 
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
+
+if (!urlParams.has("create")){
+    dbutton.style.visibility = "hidden"
+    dbutton.style.pointer_events = "none"
+}
 
 const roomID = parseInt(urlParams.get("roomID"));
 var PlayerWordMap = {}
