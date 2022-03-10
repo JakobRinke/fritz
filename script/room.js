@@ -11,7 +11,6 @@ const urlParams = new URLSearchParams(queryString);
 
 if (!urlParams.has("create")){
     dbutton.style.visibility = "hidden"
-    dbutton.style.pointer_events = "none"
 }
 
 const roomID = parseInt(urlParams.get("roomID"));
