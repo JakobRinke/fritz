@@ -62,7 +62,10 @@ function loadAllPlayerSentences(roomID,callback)
 }
 
 
-
+function loadPlayerSlot(roomID, callback) 
+{
+    gun.get(gameName + "/rooms/").get(roomID).get("players").get(secretID).once().map().once(callback)
+}
 
 
 
