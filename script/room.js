@@ -24,7 +24,7 @@ var started = false;
 
 function UpdateInputs(data, key)
 {
-    WordInputs[parseInt(key)].value = key
+    WordInputs[parseInt(key)].value = data
 }
 
 function UpdateWord()
