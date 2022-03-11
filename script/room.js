@@ -22,7 +22,10 @@ document.getElementById("RoomID").innerHTML = "Raum ID: " + roomID
 var Round = 0;
 var started = false;
 
-
+function UpdateInputs(data, key)
+{
+    wordInputs[parseInt(key)].value = key
+}
 
 function UpdateWord()
 {
@@ -129,5 +132,5 @@ function generateSentences(playerList)
 
 
 
-
+loadPlayerSlot(roomID, UpdateInputs)
 subscribeRoomEvents(roomID, onStartChange);
